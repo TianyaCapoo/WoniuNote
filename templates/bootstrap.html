@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 适配手机端 -->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <style>
+        .row div {
+            border: 2px solid red;
+        }
+        @media (min-width: 1400px){ /* 若当前网页宽度大于1300像素 则设置*/
+            .container {
+                max-width: 1300px;
+            }
+        }
+    </style>
+    <title>Bootstrap栅格系统</title>
+</head>
+<body>
+    <!-- 栅格系统会把网页分为 12等份（宽度） -->
+    <!-- 三层模拟 table 标签 <table><tr><td> -->
+    <!-- 第一次必须指定container属性 第二层必须指定row属性 -->
+
+    <div class="container">
+        <div class="row">
+            <!-- col-4 表示 占画面的 4/12 -->
+            <!-- col-6 表示 占画面的 6/12 -->
+            <!-- <div class="col-8">第一行第一列</div> -->
+            <!-- <div class="col-4">第一行第二列</div> -->
+
+            <!-- col-sm-9 表示在电脑端占9列 col-12 表示在手机端占12列(满) -->
+            <div class="col-sm-9 col-12">第一行第一列</div>
+            <div class="col-sm-3 col-12">第一行第二列</div>
+            <!-- d-none 正常隐藏  d-sm-block 在手机端显示 -->
+            <!-- d-block 正常显示  d-sm-none 在手机端隐藏 -->
+            <!-- 这里的隐藏并不是隐身 -->
+            <div class="col-sm-6 col-12 d-block d-sm-none">第二行第一列</div>
+            <div class="col-sm-4 col-12 d-none d-sm-block">第二行第二列</div>
+        </div>
+    </div>
+</body>
+</html>
