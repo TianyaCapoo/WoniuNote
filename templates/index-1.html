@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- user-scalable 表示用户是否支持缩放 yes/no -->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 先加载css 再加载js 先加载jquery 再加载bootstrap -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.6.3.min.js') }}"></script>
+    <!-- 对于bootstrap4.0以上使用bootstrap.bundle.min.js就可以了，它里面包含bootstrap.min.js和popper.min.js
+    Popper.js是轻量级提示弹窗插件 -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <title>Index</title>
+    <style>
+
+
+        body {
+            background-color: #eee;
+        }
+
+        .header {
+            border-top: 3px solid black;
+        }
+
+        .menu {
+            border-top: 3px solid orange;
+            background-color: #563d7c;
+        }
+
+        .menu-bar a:link, .menu-bar a:visited {
+            color: white;
+        }
+
+        .row div { /* row 下面的 div */
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<!-- 顶部 logo 和 slogan 区域 -->
+<div class="header">
+    <div class="container" style="border: 2px solid red; height: 82px">
+        <div class="row">
+            <!-- 这里的 padding-top设置 是为了能够垂直居中 -->
+            <div class="col-4" style="padding-top: 12px">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="" width="230px">
+            </div>
+            <div class="col-8 d-none d-sm-block" style="text-align: right; padding-top: 18px"><h2>
+                以蜗牛之名，行学习之实</h2></div>
+            <div class="col-8 d-block d-sm-none" style="text-align: right; padding-top: 18px"><h2>技术博客</h2></div>
+        </div>
+    </div>
+</div>
+<!-- 导航栏 -->
+<div class="menu">
+    <div class="container" style="border: 2px solid red; height: 50px">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#" style="color: white">快捷导航</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse menu-bar" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" style="color: white">PHP开发</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Python开发</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Web前端</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">测试开发</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">数据科学</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">网络安全</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">蜗牛杂谈</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-12" style="padding: 0; border: none">
+            <!-- 该内容填满父容器 div 所以子容器扩为 12 就好 -->
+            <!-- 不用管高度，高度与内容自适应 -->
+            <!-- 由于padding有默认值 所以会有空隙 -->
+            <div class="col-12">轮播图</div>
+            <div class="col-12">文章一</div>
+            <div class="col-12">文章二</div>
+        </div>
+        <!-- padding 内边距, margin 外边距 -->
+        <div class="col-sm-3 col-12" style="padding-right: 0; border: none">
+            <div class="col-12">搜索</div>
+            <div class="col-12">推荐</div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" style="border: 2px solid red; height: 150px"></div>
+</body>
+</html>

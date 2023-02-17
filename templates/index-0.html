@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- user-scalable 表示用户是否支持缩放 yes/no -->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <title>Index</title>
+    <style>
+        .row div { /* row 下面的 div */
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="border: 2px solid red; height: 100px"></div>
+    <div class="container-fluid" style="border: 2px solid red; height: 50px"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-12" style="padding: 0; border: none">
+                <!-- 该内容填满父容器 div 所以子容器扩为 12 就好 -->
+                <!-- 不用管高度，高度与内容自适应 -->
+                <!-- 由于padding有默认值 所以会有空隙 -->
+                <div class="col-12">轮播图</div>
+                <div class="col-12">文章一</div>
+                <div class="col-12">文章二</div>
+            </div>
+            <!-- padding 内边距, margin 外边距 -->
+            <div class="col-sm-3 col-12" style="padding-right: 0; border: none">
+                <div class="col-12">搜索</div>
+                <div class="col-12">推荐</div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="border: 2px solid red; height: 150px"></div>
+</body>
+</html>
