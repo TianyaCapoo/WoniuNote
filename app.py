@@ -15,5 +15,15 @@ def index():
     return render_template('index-1.html')
 
 
+@app.route('/article')
+def article():
+    return render_template('article-1.html')
+
+
+@app.route('/demo')
+def demo():
+    return render_template('bootstrap2.html')
+
+
 if __name__ == '__main__':
     app.run()

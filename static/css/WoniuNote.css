@@ -1,0 +1,126 @@
+body {
+            background-color: #eee;
+        }
+
+        a:link, a:visited {
+            text-decoration: none;
+            color: #337ab7;
+        }
+
+        a:hover, a:active {
+            text-decoration: none;
+            color: #e56244;
+        }
+
+        label {
+            cursor: pointer;
+        }
+
+        .header {
+            border-top: 3px solid black;
+        }
+
+        .menu {
+            border-top: 3px solid orange;
+            background-color: #563d7c;
+        }
+
+        /* 文章详情页面 */
+        .article-detail {
+            border: 1px solid #cccccc;
+            padding: 30px 15px;
+            margin: 0;
+        }
+
+        .article-detail .title {
+            font-size: 24px;
+            color: #e56244;
+        }
+
+        .article-detail .favorite {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        .article-detail .info {
+            margin-top: 20px;
+            border-bottom: #cccccc;
+            line-height: 60px;
+            border-bottom: 1px solid #cccccc;
+        }
+
+        .article-detail .content {
+            margin-top: 25px;
+        }
+
+        .article-nav {
+            border: 1px solid #cccccc;
+            margin-top: 15px;
+        }
+
+        .article-nav div {
+            height: 30px;
+            line-height: 30px;
+            padding-left: 20px;
+        }
+
+        .article-comment {
+            border: 1px solid #cccccc;
+            margin-top: 15px;
+            padding: 15px 0;
+        }
+
+        .search-bar {
+            margin: 0;
+            border: 1px solid #ccc;
+            padding: 15px 10px;
+            background-color: #563d7c;
+        }
+
+        .side {
+            border: 1px solid #ccc;
+            margin: 15px 0
+        }
+
+        .side .tip {
+            background-color: #333;
+            height: 28px;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            line-height: 28px; /* 设置垂直居中 */
+            border-bottom: 2px solid orange;
+        }
+        .side ul {
+            list-style: none;
+            padding-left: 13px;
+        }
+        .side li {
+            line-height: 35px;
+        }
+
+        .footer {
+            background-color: #333;
+            margin-top: 20px;
+            margin-bottom: 0;
+            padding: 0;
+            border-radius: 0;
+            color: white;
+        }
+
+        .footer .left {
+            font-size: 16px;
+            margin: 20px 0;
+        }
+
+        .footer .center {
+            font-size: 16px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .footer .right {
+            font-size: 16px;
+            margin: 20px 0;
+            text-align: right;
+        }

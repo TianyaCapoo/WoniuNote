@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/WoniuNote.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.6.3.min.js') }}"></script>
+    <!-- 对于bootstrap4.0以上使用bootstrap.bundle.min.js就可以了，它里面包含bootstrap.min.js和popper.min.js
+    Popper.js是轻量级提示弹窗插件 -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <title>Document</title>
+</head>
+<body>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login-tab-pane"
+                type="button"
+                role="tab" aria-controls="login-tab-pane" aria-selected="true">登录
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register-tab-pane"
+                type="button"
+                role="tab" aria-controls="profile-tab-pane" aria-selected="false">注册
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button"
+                role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane"
+                type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled
+        </button>
+    </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="login-tab-pane" role="tabpanel" aria-labelledby="login-tab" tabindex="0">
+        我是登录页面
+    </div>
+    <div class="tab-pane fade" id="register-tab-pane" role="tabpanel" aria-labelledby="register-tab" tabindex="0">
+        我是注册页面
+        <button class="btn btn-success">你好</button>
+    </div>
+    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...
+    </div>
+    <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...
+    </div>
+</div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    点我登录
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- 页面标题 -->
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">登录窗口</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- 页面内容 -->
+            <div class="modal-body">
+                用户名：<input type="text" class="form-control">
+                密码：<input type="text" class="form-control">
+                <!--
+                <input type="button" class="btn btn-secondary" value="登录">
+                -->
+            </div>
+            <!-- 页面jio -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" onclick="alert('hello')">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

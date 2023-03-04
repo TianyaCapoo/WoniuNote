@@ -8,37 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- 先加载css 再加载js 先加载jquery 再加载bootstrap -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/WoniuNote.css') }}">
     <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.6.3.min.js') }}"></script>
     <!-- 对于bootstrap4.0以上使用bootstrap.bundle.min.js就可以了，它里面包含bootstrap.min.js和popper.min.js
     Popper.js是轻量级提示弹窗插件 -->
     <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
     <title>Index</title>
     <style>
-
-
-        body {
-            background-color: #eee;
-        }
-
-        .header {
-            border-top: 3px solid black;
-        }
-
-        .menu {
-            border-top: 3px solid orange;
-            background-color: #563d7c;
-        }
-
-        .text {
-            margin: 15px 0;
-        }
-
-        .search-bar {
-            margin: 0;
-            border: 1px solid #ccc;
-            padding: 15px 10px;
-            background-color: #563d7c;
-        }
 
     </style>
 </head>
@@ -116,7 +92,7 @@
         </nav>
     </div>
 </div>
-
+<!-- 中间内容 -->
 <div class="container">
     <div class="row">
         <!-- 左侧容器 -->
@@ -125,7 +101,7 @@
             <!-- 不用管高度，高度与内容自适应 -->
             <!-- 由于padding有默认值 所以会有空隙 -->
             <!-- 轮播图 -->
-            <div class="col-12" style="padding: 15px 0">
+            <div class="col-12 order-0 order-sm-first" style="padding: 15px 0">
                 <div id="carouselExampleIndicators" class="carousel slide">
                     <div class="carousel-indicators" style="border: none">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -163,23 +139,81 @@
             </div>
             <!-- 文章区 -->
             <div>
-                <div class="col-12 text" style="height: 120px; border: 1px solid black">
-                    文章一
+                <div class="col-12 row article-list">
+                    <div class="col-sm-3 col-3 thumb d-none d-sm-block">
+                        <img class="img-fluid" src="{{ url_for('static', filename='img/banner-4.jpg') }}" alt=""
+                             width="226px" height="136px">
+                    </div>
+                    <div class="col-sm-9 col-xs-12 detail">
+                        <div class="title"><a href="">漫谈:强哥在强哥学堂想对朋友们说的一些话</a></div>
+                        <div class="info">作者: 强哥&nbsp;&nbsp;&nbsp;类别: 测试开发&nbsp;&nbsp;&nbsp;
+                        日期：2017-11-10 12:18:02&nbsp;&nbsp;&nbsp;阅读：1513 次&nbsp;&nbsp;&nbsp;消耗积分：2 分</div>
+                        <div class="intro">
+                            大家好，我是强哥，我是一名程序员。我始终相信“技术改变生活，研发构建未来”。
+                            今天咱们一起来聊一聊技术，尤其是IT技术，是如何一步一步从一个小众玩家变成大众产业，逐步...
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 text" style="height: 120px; border: 1px solid black">
-                    文章二
+                <div class="col-12 row article-list">
+                    <div class="col-sm-3 col-3 thumb d-none d-sm-block">
+                        <img class="img-fluid" src="{{ url_for('static', filename='img/banner-4.jpg') }}" alt=""
+                             width="226px" height="136px">
+                    </div>
+                    <div class="col-sm-9 col-xs-12 detail">
+                        <div class="title"><a href="">漫谈:强哥在强哥学堂想对朋友们说的一些话</a></div>
+                        <div class="info">作者: 强哥&nbsp;&nbsp;&nbsp;类别: 测试开发&nbsp;&nbsp;&nbsp;
+                        日期：2017-11-10 12:18:02&nbsp;&nbsp;&nbsp;阅读：1513 次&nbsp;&nbsp;&nbsp;消耗积分：2 分</div>
+                        <div class="intro">
+                            大家好，我是强哥，我是一名程序员。我始终相信“技术改变生活，研发构建未来”。
+                            今天咱们一起来聊一聊技术，尤其是IT技术，是如何一步一步从一个小众玩家变成大众产业，逐步...
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 text" style="height: 120px; border: 1px solid black">
-                    文章三
+                <div class="col-12 row article-list">
+                    <div class="col-sm-3 col-3 thumb d-none d-sm-block">
+                        <img class="img-fluid" src="{{ url_for('static', filename='img/banner-4.jpg') }}" alt=""
+                             width="226px" height="136px">
+                    </div>
+                    <div class="col-sm-9 col-xs-12 detail">
+                        <div class="title"><a href="">漫谈:强哥在强哥学堂想对朋友们说的一些话</a></div>
+                        <div class="info">作者: 强哥&nbsp;&nbsp;&nbsp;类别: 测试开发&nbsp;&nbsp;&nbsp;
+                        日期：2017-11-10 12:18:02&nbsp;&nbsp;&nbsp;阅读：1513 次&nbsp;&nbsp;&nbsp;消耗积分：2 分</div>
+                        <div class="intro">
+                            大家好，我是强哥，我是一名程序员。我始终相信“技术改变生活，研发构建未来”。
+                            今天咱们一起来聊一聊技术，尤其是IT技术，是如何一步一步从一个小众玩家变成大众产业，逐步...
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 text" style="height: 120px; border: 1px solid black">
-                    文章四
+                <div class="col-12 row article-list">
+                    <div class="col-sm-3 col-3 thumb d-none d-sm-block">
+                        <img class="img-fluid" src="{{ url_for('static', filename='img/banner-4.jpg') }}" alt=""
+                             width="226px" height="136px">
+                    </div>
+                    <div class="col-sm-9 col-xs-12 detail">
+                        <div class="title"><a href="">漫谈:强哥在强哥学堂想对朋友们说的一些话</a></div>
+                        <div class="info">作者: 强哥&nbsp;&nbsp;&nbsp;类别: 测试开发&nbsp;&nbsp;&nbsp;
+                        日期：2017-11-10 12:18:02&nbsp;&nbsp;&nbsp;阅读：1513 次&nbsp;&nbsp;&nbsp;消耗积分：2 分</div>
+                        <div class="intro">
+                            大家好，我是强哥，我是一名程序员。我始终相信“技术改变生活，研发构建未来”。
+                            今天咱们一起来聊一聊技术，尤其是IT技术，是如何一步一步从一个小众玩家变成大众产业，逐步...
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 pagination">
+                    <a href="#">上一页</a>
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">下一页</a>
                 </div>
             </div>
         </div>
         <!-- 右侧容器 -->
         <!-- padding 内边距, margin 外边距 -->
-        <div class="col-sm-3 col-12">
+        <div class="col-sm-3 col-12 order-first order-sm-0">
             <!-- 搜索栏 -->
             <div class="col-12 search-bar" style="border: 1px solid black; border-radius: 18px; height: 80px; margin: 15px 0">
                 <form class="d-flex" role="search" style="height: 50px">
@@ -187,12 +221,52 @@
                     <button class="btn btn-info" type="submit" style="width: 30%">搜索</button>
                 </form>
             </div>
-            <div class="col-12" style="border: 1px solid black; border-radius: 12px; height: 340px; margin: 15px 0">
-                推荐
+            <!-- 推荐栏 -->
+            <div class="col-12 side">
+                <div class="tip">
+                    推荐文章
+                </div>
+                <ul>
+                    <li><a href="">1</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a href="">3</a></li>
+                </ul>
+            </div>
+            <!-- 最新栏 -->
+            <div class="col-12 side">
+                <div class="tip">
+                    最新文章
+                </div>
+                <ul>
+                    <li><a href="">1</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a href="">3</a></li>
+                    <li><a href="">4</a></li>
+                    <li><a href="">5</a></li>
+                </ul>
             </div>
         </div>
     </div>
 </div>
-<div class="container-fluid" style="border: 2px solid red; height: 150px"></div>
+<!-- 页脚 -->
+<div class="container-fluid footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-4 left">
+                <p>&copy; 2018</p>
+                <p>天涯</p>
+            </div>
+            <div class="col-4 center">
+                <p>友情链接</p>
+                <p><a href="#" target="_blank">链接测试1</a></p>
+                <p><a href="#" target="_blank">链接测试2</a></p>
+            </div>
+            <div class="col-4 right">
+                <p>联系我</p>
+                <p>xxxxxxxx</p>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
